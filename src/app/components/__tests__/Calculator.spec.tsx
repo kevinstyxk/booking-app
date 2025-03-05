@@ -1,5 +1,7 @@
 import Calculator from '../Calculator'
 
+import IsAnyEven from '../IsAnyEven'
+
 describe("Calculator", () => {
   it("executes code", () => {
     expect(true).toBe(true);
@@ -38,6 +40,7 @@ describe("Calculator", () => {
 
   })
 
+  /** Assignment */
   describe("can do multiplication", () => {
 
   })
@@ -51,11 +54,15 @@ describe("Calculator", () => {
    */
   describe("can detect if any number entered is an even number", () => {
     it("should return true if there exists an even number among the inputs", () => {
+      const result1 = IsAnyEven([1,2,3])
 
+      expect(result1).toBe(true);
     })
 
     it("should return false if no even number exists among the inputs", () => {
-      
+      const result1 = IsAnyEven([1,3,5])
+
+      expect(result1).toBe(false);
     })
   })
 })
