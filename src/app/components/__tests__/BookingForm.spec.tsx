@@ -12,7 +12,7 @@ describe("BookingForm", () => {
     render(<BookingForm />);
     const nameInput = screen.getByPlaceholderText("Your Name");
     
-    const dateInput = screen.getByLabelText("Book Now").previousElementSibling as HTMLInputElement;
+    const dateInput = screen.getByText("Book Now").previousElementSibling as HTMLInputElement;
 
     fireEvent.change(nameInput, { target: { value: "John Doe" } });
     fireEvent.change(dateInput, { target: { value: "2025-03-10" } });
@@ -21,14 +21,12 @@ describe("BookingForm", () => {
     expect(dateInput).toHaveValue("2025-03-10");
   });
 
-  /*
   it("shows confirmation message after form submission", () => {
     render(<BookingForm />);
     fireEvent.change(screen.getByPlaceholderText("Your Name"), { target: { value: "John Doe" } });
-    //fireEvent.change(screen.getByLabelText("Book Now").previousElementSibling as HTMLInputElement, { target: { value: "2025-03-10" } });
+    fireEvent.change(screen.getByText("Book Now").previousElementSibling as HTMLInputElement, { target: { value: "2025-03-10" } });
     fireEvent.click(screen.getByText("Book Now"));
 
     expect(screen.getByText("Appointment booked for John Doe on 2025-03-10")).toBeInTheDocument();
   });
-  */
 });

@@ -31,7 +31,6 @@ export default function BookingForm() {
           />
           <input
             type="date"
-            placeholder="Your Name"
             value={date}
             onChange={(e) => setDate(e.target.value)}
             className="w-full p-2 border rounded"
