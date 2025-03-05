@@ -54,7 +54,7 @@ describe("Calculator", () => {
 
     })
 
-    it("should return false if there no even number exists among the inputs", () => {
+    it("should return false if no even number exists among the inputs", () => {
       
     })
   })
