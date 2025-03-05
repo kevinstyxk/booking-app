@@ -5,7 +5,7 @@ describe("Calculator", () => {
     expect(true).toBe(true);
   })
 
-  describe("can add 2 numbers", () => {
+  describe("can do addition", () => {
     it("should return the sum of 2 numbers in an array", () => {
       const result1 = Calculator([2, 3]);
 
@@ -32,5 +32,30 @@ describe("Calculator", () => {
       expect(result1).toBe(20);
     })
     /**/
+  })
+
+  describe("can do subtraction", () => {
+
+  })
+
+  describe("can do multiplication", () => {
+
+  })
+
+  /**
+   * Challenge
+   * 
+   * clue: modulo operator %
+   * 
+   * or 
+   */
+  describe("can detect if any number entered is an even number", () => {
+    it("should return true if there exists an even number among the inputs", () => {
+
+    })
+
+    it("should return false if there no even number exists among the inputs", () => {
+      
+    })
   })
 })
